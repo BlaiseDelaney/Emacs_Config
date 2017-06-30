@@ -48,19 +48,21 @@
 (setq linum-format "%4d \u2502 ")
 
 
+
+; lines below based on tutorial given on https://www.youtube.com/channel/UCibKclzsnnHjQZFOLuykZ1A
 ; start auto-complete with emacs
 (require 'auto-complete)
-; do default config for auto-complete
+; default config for auto-complete
 (require 'auto-complete-config)
 (ac-config-default)
-; start yasnippet with emacs
+; start yasnippet when loading emacs
 (require 'yasnippet)
 (yas-global-mode 1)
 
 
 ; Enable elpy mode
 (elpy-enable)
-; Fixing a key binding bug in elpy
+; Fixing a key binding bug in elpy -- credit: tutorial by b yuksel @ https://www.youtube.com/channel/UCibKclzsnnHjQZFOLuykZ1A
 (define-key yas-minor-mode-map (kbd "C-c k") 'yas-expand)
 ; Fixing another key binding bug in iedit mode
 (define-key global-map (kbd "C-c o") 'iedit-mode)
